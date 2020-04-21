@@ -137,3 +137,10 @@ body {
     font-size: 1.5rem;
     color: #555;
 }
+
+.app-body {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    overflow-x: hidden;
+}
