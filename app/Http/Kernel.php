@@ -5,8 +5,6 @@ namespace App\Http;
 use App\Http\Middleware\PermissionMiddleware;
 use App\Http\Middleware\RoleMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-use Spatie\Permission\Contracts\Permission;
-use Spatie\Permission\Contracts\Role;
 
 class Kernel extends HttpKernel
 {
