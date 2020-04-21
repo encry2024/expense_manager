@@ -14,7 +14,7 @@ Route::group(['as' => 'frontend.'], function () {
     include_route_files(__DIR__.'/frontend/');
 });
 
-Route::group(['namespace' => 'Backend', 'as' => 'admin.', 'middleware' => 'admin'], function () {
+Route::group(['namespace' => 'Backend', 'as' => 'backend.', 'middleware' => 'admin'], function () {
     /*
      * These routes need view-backend permission
      * (good if you want to allow more than one group in the backend,
