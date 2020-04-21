@@ -178,7 +178,9 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Spatie\Permission\PermissionServiceProvider::class,
-        App\Providers\HelperServiceProvider::class
+        App\Providers\HelperServiceProvider::class,
+
+        HieuLe\Active\ActiveServiceProvider::class,
     ],
 
     /*
@@ -227,7 +229,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Active' => HieuLe\Active\Facades\Active::class,
     ],
 
 ];
