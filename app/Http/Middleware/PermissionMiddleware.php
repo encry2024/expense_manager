@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Spatie\Permission\Exceptions\UnauthorizedException;
+use Auth;
 
 class PermissionMiddleware
 {
@@ -16,20 +16,14 @@ class PermissionMiddleware
      */
     public function handle($request, Closure $next, $permission)
     {
-        if (app('auth')->guest()) {
-            throw UnauthorizedException::notLoggedIn();
+        if (Auth::guest()) {
+            return redirect('login');
         }
 
-        $permissions = is_array($permission)
-            ? $permission
-            : explode('|', $permission);
-
-        foreach ($permissions as $permission) {
-            if (app('auth')->user()->can($permission)) {
-                return $next($request);
-            }
+        if (! $request->user()->can($permission)) {
+            abort(403);
         }
 
-        throw UnauthorizedException::forPermissions($permissions);
+        return $next($request);
     }
 }
