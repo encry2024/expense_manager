@@ -20,6 +20,7 @@
     <div class="app-body">
         @include('backend.layouts.sidebar')
         <div class="container">
+            @include('alerts')
             @yield('content')
         </div>
     </div>
