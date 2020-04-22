@@ -134,7 +134,7 @@
 
 body {
     font-family: "Poppins", sans-serif !important;
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
     color: #555;
 }
 
@@ -143,4 +143,8 @@ body {
     flex-direction: row;
     flex-grow: 1;
     overflow-x: hidden;
+}
+
+.float-right {
+    float: right;
 }
