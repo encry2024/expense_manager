@@ -1,11 +1,10 @@
 <div class="col-lg-3">
 	<div class="list-group">
-		<a href="{{ route('backend.dashboard') }}" class="list-group-item list-group-item-action {{ active_class(Active::checkUriPattern('dashboard')) }}">
-			Dashboard
-		</a>
-		<a href="{{ route('backend.expense.index') }}" class="list-group-item list-group-item-action {{ active_class(Active::checkUriPattern('expense*')) }}">Expenses</a>
+		<router-link to="/dashboard" class="list-group-item list-group-item-action">Dashboard</router-link>
+		<router-link to="/expense/" class="list-group-item list-group-item-action">Expense</router-link>
 		@if (Auth::user()->hasRole('administrator'))
-			<a href="{{ route('backend.admin.user.index') }}" class="list-group-item list-group-item-action {{ active_class(Active::checkUriPattern('user*')) }}">Users</a>
+			<router-link to="/category/" class="list-group-item list-group-item-action">Category</router-link>
+			<router-link to="/user/" class="list-group-item list-group-item-action">Users</router-link>
 		@endif
 	</div>
 </div>
