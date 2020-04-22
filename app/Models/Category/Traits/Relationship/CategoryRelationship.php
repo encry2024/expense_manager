@@ -11,7 +11,7 @@ trait CategoryRelationship
 
     public function expenses()
     {
-        $this->hasMany(Expense::class);
+        return $this->hasMany(Expense::class);
     }
 
 }
