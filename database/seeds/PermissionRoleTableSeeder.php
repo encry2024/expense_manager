@@ -32,6 +32,13 @@ class PermissionRoleTableSeeder extends Seeder
             'delete expense',
             'restore expense',
             'delete permanently expense',
+
+            'view category',
+            'create category',
+            'store category',
+            'edit category',
+            'update category',
+            'delete category'
         ];
 
         foreach ($permissions as $permission) {
