@@ -10,4 +10,9 @@ trait UserAttribute
     {
         return $this->first_name . ' ' . $this->last_name;
     }
+
+    public function getFormattedCreatedAtAttribute()
+    {
+        return date('F d, Y h:i A', strtotime($this->created_at));
+    }
 }
