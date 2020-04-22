@@ -24,4 +24,8 @@ Route::group(['namespace' => 'Backend', 'as' => 'backend.', 'middleware' => 'adm
      * These routes can not be hit if the password is expired
      */
     include_route_files(__DIR__.'/backend/');
+
+    Route::get('dashboard', 'DashboardController@index');
 });
+
+Route::get('/', 'AppController@index')->where('/', '.*');
